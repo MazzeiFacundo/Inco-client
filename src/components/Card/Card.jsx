@@ -24,7 +24,7 @@ function Card(
     }) {
     return (
         <div className="cardContainer">
-            <img className="imgCard" src={`https://inco-server-production.up.railway.app/getPhotoProduct?id=${id}`} alt="none" />
+            <img className="imgCard" src={`https://inco-server-production.up.railway.app/display/getPhotoProduct?id=${id}`} alt="none" />
             <div className="allTextCardContainer">
                 <div className="cardTitleContainer">
                     <div className="cardTitle">{name}</div>

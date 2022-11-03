@@ -98,7 +98,7 @@ function EditImgGallery({ id, galleryCount }) {
                             >
 
                                 <img className={"img-g-edit-images-single"}
-                                    src={`https://inco-server-production.up.railway.app/getPhotoGallery?id=${el.id}`} alt='none'
+                                    src={`https://inco-server-production.up.railway.app/display/getPhotoGallery?id=${el.id}`} alt='none'
                                 />
                                 <div className="img-g-images-btns-container">
                                     <label className="img-g-edit-images-single-input-label">Replace

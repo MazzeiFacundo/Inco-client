@@ -43,7 +43,7 @@ export const productsSlice = createSlice({
 
 export const showAllProducts = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProducts");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProducts");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -51,7 +51,7 @@ export const showAllProducts = (data) => async (dispatch) => {
 
 export const showAllProductsASC = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsASC");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsASC");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -59,7 +59,7 @@ export const showAllProductsASC = (data) => async (dispatch) => {
 
 export const showAllProductsDESC = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsDESC");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsDESC");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -67,7 +67,7 @@ export const showAllProductsDESC = (data) => async (dispatch) => {
 
 export const showAllProductsOneRoom = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsOneRoom");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsOneRoom");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -75,7 +75,7 @@ export const showAllProductsOneRoom = (data) => async (dispatch) => {
 
 export const showAllProductsTwoRooms = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsTwoRooms");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsTwoRooms");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -83,7 +83,7 @@ export const showAllProductsTwoRooms = (data) => async (dispatch) => {
 
 export const showAllProductsThreeRooms = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsThreeRooms");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsThreeRooms");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -91,7 +91,7 @@ export const showAllProductsThreeRooms = (data) => async (dispatch) => {
 
 export const showAllProductsFourRoomsPlus = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsFourRoomsPlus");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsFourRoomsPlus");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -99,7 +99,7 @@ export const showAllProductsFourRoomsPlus = (data) => async (dispatch) => {
 
 export const showAllProductsOneDorm = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsOneDorm");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsOneDorm");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -107,7 +107,7 @@ export const showAllProductsOneDorm = (data) => async (dispatch) => {
 
 export const showAllProductsTwoDorms = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsTwoDorm");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsTwoDorm");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -115,7 +115,7 @@ export const showAllProductsTwoDorms = (data) => async (dispatch) => {
 
 export const showAllProductsThreeDorms = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsThreeDorm");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsThreeDorm");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -123,7 +123,7 @@ export const showAllProductsThreeDorms = (data) => async (dispatch) => {
 
 export const showAllProductsFourDormsPlus = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsFourDormPlus");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsFourDormPlus");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -131,7 +131,7 @@ export const showAllProductsFourDormsPlus = (data) => async (dispatch) => {
 
 export const showAllProductsOneBath = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsOneBath");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsOneBath");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -139,7 +139,7 @@ export const showAllProductsOneBath = (data) => async (dispatch) => {
 
 export const showAllProductsTwoBaths = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsTwoBath");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsTwoBath");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -147,7 +147,7 @@ export const showAllProductsTwoBaths = (data) => async (dispatch) => {
 
 export const showAllProductsThreeBaths = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsThreeBath");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsThreeBath");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -155,7 +155,7 @@ export const showAllProductsThreeBaths = (data) => async (dispatch) => {
 
 export const showAllProductsFourBathsPlus = (data) => async (dispatch) => {
     try {
-        const response = await axios.get("https://inco-server-production.up.railway.app/allProductsFourBathPlus");
+        const response = await axios.get("https://inco-server-production.up.railway.app/display/allProductsFourBathPlus");
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -163,7 +163,7 @@ export const showAllProductsFourBathsPlus = (data) => async (dispatch) => {
 
 export const getCurrentProductDetail = (productId) => async (dispatch) => {
     try {
-        const response = await axios.get(`https://inco-server-production.up.railway.app/productById?id=${productId}`);
+        const response = await axios.get(`https://inco-server-production.up.railway.app/display/productById?id=${productId}`);
         dispatch(showCurrentProductDetails(response.data));
     } catch (err) {
     }
@@ -171,7 +171,7 @@ export const getCurrentProductDetail = (productId) => async (dispatch) => {
 
 export const getProductsGallery = (productId) => async (dispatch) => {
     try {
-        const response = await axios.get(`https://inco-server-production.up.railway.app/getGalleryProduct?id=${productId}`);
+        const response = await axios.get(`https://inco-server-production.up.railway.app/display/getGalleryProduct?id=${productId}`);
         dispatch(showCurrentProductGallery(response.data));
     } catch (err) {
     }
@@ -179,7 +179,7 @@ export const getProductsGallery = (productId) => async (dispatch) => {
 
 export const getCurrentUser = (userData) => async (dispatch) => {
     try {
-        const response = await axios.get(`https://inco-server-production.up.railway.app/profileInfoToken?token=${userData}`);
+        const response = await axios.get(`https://inco-server-production.up.railway.app/users/profileInfoToken?token=${userData}`);
         dispatch(getUserInfo(response.data));
     } catch (err) {
     }
@@ -187,7 +187,7 @@ export const getCurrentUser = (userData) => async (dispatch) => {
 
 export const getCurrentUserById = (userId) => async (dispatch) => {
     try {
-        const response = await axios.get(`https://inco-server-production.up.railway.app/profileInfoById?id=${userId}`);
+        const response = await axios.get(`https://inco-server-production.up.railway.app/users/profileInfoById?id=${userId}`);
         dispatch(getUserInfoById(response.data));
     } catch (err) {
     }
@@ -196,7 +196,7 @@ export const getCurrentUserById = (userId) => async (dispatch) => {
 
 export const getProductsSearched = (productName) => async (dispatch) => {
     try {
-        const response = await axios.get(`https://inco-server-production.up.railway.app/allProducts?name=${productName}`);
+        const response = await axios.get(`https://inco-server-production.up.railway.app/display/allProducts?name=${productName}`);
         dispatch(showAll(response.data));
     } catch (err) {
     }
@@ -204,7 +204,7 @@ export const getProductsSearched = (productName) => async (dispatch) => {
 
 export const deleteGalleryImage = (imageId) => async (dispatch) => {
     try {
-        const response = await axios.delete(`https://inco-server-production.up.railway.app/galleryImageDelete?id=${imageId}`);
+        const response = await axios.delete(`https://inco-server-production.up.railway.app/listNew/galleryImageDelete?id=${imageId}`);
     } catch (err) {
     }
 };
