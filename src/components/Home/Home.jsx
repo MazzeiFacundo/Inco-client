@@ -20,7 +20,6 @@ function Home() {
         const newProducts = dispatch(showAllProducts())
         const userCredentials = window.localStorage.getItem("userCredentials");
         const userToken = JSON.parse(userCredentials);
-        console.log(userToken)
         if (!userToken) {
             navigate("/");
         }
@@ -57,7 +56,6 @@ function Home() {
                         <button onClick={(e) => handleClear(e)} className="searchButtonHome">Reset</button>
                     </div>
 
-                    {console.log(currentProducts)}
 
                     {
                         currentProducts.map((e) => {

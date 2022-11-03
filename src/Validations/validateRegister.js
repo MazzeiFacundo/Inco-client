@@ -2,7 +2,6 @@ export function validateRegister(input) {
     const errors = {};
     let regex = /^(?=.*[A-Za-z ñ Ñ])[A-Za-z ñ Ñ]{8,35}$/
     if (!regex.test(input.fullName)) {
-        console.log(regex.test(input.userName))
         errors.fullName = "Your full name must be between 8 and 35 characters long and must not contain special characters.";
     } else
         if (!/^(?=.*[A-Za-z ñ Ñ])[ A-Za-z ñ Ñ\d@$!%*#?&^_-]{3,20}$/.test(input.userName)) {
@@ -16,7 +15,6 @@ export function validateRegister(input) {
                 if (
                     !/^[0-9]{7,15}$/.test(input.tel)
                 ) {
-                    console.log("error")
                     errors.tel = "Your cellphone number must be between 7 and 15 characters and contain only numbers.";
                 }
                 else

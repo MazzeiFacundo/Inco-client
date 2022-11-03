@@ -45,7 +45,6 @@ function Filters() {
 
     function handleRooms(e) {
         e.preventDefault()
-        console.log(e.target.value)
         if (e.target.value === "1") dispatch(showAllProductsOneRoom())
         if (e.target.value === "2") dispatch(showAllProductsTwoRooms())
         if (e.target.value === "3") dispatch(showAllProductsThreeRooms())
@@ -54,7 +53,6 @@ function Filters() {
 
     function handleDorms(e) {
         e.preventDefault()
-        console.log(e.target.value)
         if (e.target.value === "1") dispatch(showAllProductsOneDorm())
         if (e.target.value === "2") dispatch(showAllProductsTwoDorms())
         if (e.target.value === "3") dispatch(showAllProductsThreeDorms())
@@ -63,7 +61,6 @@ function Filters() {
 
     function handleBathrooms(e) {
         e.preventDefault()
-        console.log(e.target.value)
         if (e.target.value === "1") dispatch(showAllProductsOneBath())
         if (e.target.value === "2") dispatch(showAllProductsTwoBaths())
         if (e.target.value === "3") dispatch(showAllProductsThreeBaths())

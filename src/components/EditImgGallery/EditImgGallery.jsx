@@ -30,7 +30,6 @@ function EditImgGallery({ id, galleryCount }) {
 
     const handleDelete = async (e, idImg) => {
         e.preventDefault();
-        console.log("here")
         setComponentRefresh(componentRefresh + 1)
         try {
             dispatch(deleteGalleryImage(idImg))
@@ -39,16 +38,13 @@ function EditImgGallery({ id, galleryCount }) {
                 setimagesRefresh(imagesRefresh + 1)
             }, 200)
         } catch (error) {
-            console.log(error)
         }
         setimagesRefresh(imagesRefresh + 1)
         galleryCount(images.flat(1).length - 1)
-        console.log(galleryCount(images.flat(1).length - 1))
     }
 
     const handleSubmit = async (e, idImg) => {
         e.preventDefault()
-        console.log(idImg)
         const fdGalleryImage = new FormData();
         fdGalleryImage.append("photoProduct", e.target.files[0], "photoProduct")
 
@@ -61,7 +57,6 @@ function EditImgGallery({ id, galleryCount }) {
             });
             dispatch(getProductsGallery(id))
         } catch (error) {
-            console.log(error)
         }
     }
 
@@ -113,7 +108,6 @@ function EditImgGallery({ id, galleryCount }) {
                                             name="photoProfile"
                                             className="img-g-edit-images-single-input"
                                             onChange={(e) => {
-                                                console.log(el.id)
                                                 handleSubmit(e, el.id)
                                             }}
                                         />
@@ -122,7 +116,6 @@ function EditImgGallery({ id, galleryCount }) {
                                         className="img-g-single-img-delete-btn"
                                         type="button"
                                         onClick={(e) => {
-                                            console.log(el.id)
                                             handleDelete(e, el.id)
                                             // handleGalleryCount(images.length)
                                         }}

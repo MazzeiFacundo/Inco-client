@@ -31,10 +31,8 @@ function LandingPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(input)
         try {
             const response = await axios.post("https://inco-server-production.up.railway.app/login", input);
-            console.log(response)
             dispatch(getToken(response.data.token));
             window.localStorage.setItem(
                 "userCredentials",
@@ -45,7 +43,6 @@ function LandingPage() {
         } catch (e) {
             if (e.response.data.msgE === "Incorrect Password") setErrors({ password: e.response.data.msgE })
             if (e.response.data.msgE === "This email adress has not been registered yet") setErrors({ email: e.response.data.msgE })
-            console.log(e.response.data.msgE)
             setInput({
                 email: "",
                 password: "",
@@ -55,14 +52,12 @@ function LandingPage() {
 
     const handleSubmitGuest = async (e) => {
         e.preventDefault();
-        console.log(input)
         try {
             const response = await axios.post("https://inco-server-production.up.railway.app/login",
                 {
                     email: "IncoGuestEmail@gmail.com",
                     password: "GuestPassword1"
                 });
-            console.log(response)
             dispatch(getToken(response.data.token));
             window.localStorage.setItem(
                 "userCredentials",
@@ -73,7 +68,6 @@ function LandingPage() {
         } catch (e) {
             if (e.response.data.msgE === "Incorrect Password") setErrors({ password: e.response.data.msgE })
             if (e.response.data.msgE === "This email adress has not been registered yet") setErrors({ email: e.response.data.msgE })
-            console.log(e.response.data.msgE)
             setInput({
                 email: "",
                 password: "",

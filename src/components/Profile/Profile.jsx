@@ -35,7 +35,6 @@ function Profile() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(e.target.files[0]);
         const fdUserImage = new FormData();
         fdUserImage.append("photoUser", e.target.files[0], "photoUser")
 
@@ -46,12 +45,10 @@ function Profile() {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            console.log(responseProductImg)
 
             window.location.reload();
 
         } catch (error) {
-            console.log(error)
         }
     }
 
@@ -99,13 +96,11 @@ function Profile() {
                 <div className="descriptionProfile">
                     <div className="descriptionProfileText">{currentUser.description}</div>
                 </div>
-                {console.log(currentUser)}
 
             </div>
             <div className="profileContainer">
 
 
-                {console.log(currentUser.products)}
                 <div className="userProducts">
                     {
                         (userProducts || []).map((e) => {

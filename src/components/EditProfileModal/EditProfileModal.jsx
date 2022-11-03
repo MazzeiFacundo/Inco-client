@@ -24,14 +24,12 @@ function EditProfileModal({ fullName, tel, description, closeModal }) {
             ...input,
             token: userToken
         })
-        console.log(userToken)
         if (!userToken) {
             navigate("/");
         }
     }, []);
 
     function handleChange(e) {
-        console.log(e.target.name)
         setInput({
             ...input,
             [e.target.name]: e.target.value
@@ -46,11 +44,8 @@ function EditProfileModal({ fullName, tel, description, closeModal }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(input)
         try {
-            console.log(input)
             const response = await axios.post(`https://inco-server-production.up.railway.app/users/editProfileInfo`, input);
-            console.log(response)
             window.location.reload();
             setInput({
                 token: "",
@@ -59,7 +54,6 @@ function EditProfileModal({ fullName, tel, description, closeModal }) {
                 description: description
             });
         } catch (e) {
-            console.log(e.response.data.msgE)
             setInput({
                 token: "",
                 fullName: fullName,

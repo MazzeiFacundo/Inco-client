@@ -44,7 +44,6 @@ function ListProduct() {
     useEffect(() => {
         const userCredentials = window.localStorage.getItem("userCredentials");
         const userToken = JSON.parse(userCredentials);
-        console.log(JSON.parse(userCredentials))
         if (!userToken) {
             navigate("/home");
         }
@@ -52,7 +51,6 @@ function ListProduct() {
 
     const handleAddImg = () => {
         setImgList([...imgList, { image: "" }])
-        console.log(imgList)
     }
 
     const handleRemoveImg = (index) => {
@@ -66,13 +64,10 @@ function ListProduct() {
         const newList = [...imgList]
         newList[index][name] = files[0];
         setImgList(newList)
-        console.log(e.target.files[0])
     }
 
     const handleImage = (e) => {
-        console.log(e.target.files[0]);
         setPhotoProduct(e.target.files[0]);
-        console.log(photoProduct);
     };
 
     const handleSecondTypeOfDeal = (e) => {
@@ -105,13 +100,11 @@ function ListProduct() {
     }
 
     function handleChange(e) {
-        console.log(e.target.name)
         setInput({
             ...input,
             [e.target.name]: e.target.value
         })
         setErrors(validateProduct({ ...input, [e.target.name]: e.target.value }))
-        console.log(input)
     }
 
     function handleSelectTypeOfDeal(e) {
@@ -182,10 +175,8 @@ function ListProduct() {
         const fdProductImage = new FormData();
         if (photoProduct.name) fdProductImage.append("photoProduct", photoProduct, "photoProduct")
 
-        console.log("start")
 
         try {
-            console.log("trycatch1")
             const responseInput = await axios.post("https://inco-server-production.up.railway.app/listNew/product", fd);
             if (responseInput.data.msgE) {
                 setInput({
@@ -220,7 +211,6 @@ function ListProduct() {
             });
 
             try {
-                console.log("trycatch2")
                 const responseProductImg = await axios.post(`https://inco-server-production.up.railway.app/listNew/productImage?id=${responseInput.data.productCreated.id}`,
                     fdProductImage, {
                     headers: {
@@ -228,11 +218,9 @@ function ListProduct() {
                     }
                 });
             } catch (e) {
-                console.log(e)
             }
 
             try {
-                console.log("trycatch3")
                 const singleImgResponse = async () => {
                     const imgListFiltered = imgList.filter((e) => { return typeof e.image.name === "string" })
                     if (imgListFiltered.length === 0) return
@@ -250,11 +238,9 @@ function ListProduct() {
                 }
                 singleImgResponse()
             } catch (e) {
-                console.log(e)
             }
 
         } catch (e) {
-            console.log(e)
         }
 
 
@@ -599,7 +585,6 @@ function ListProduct() {
                             <label className="list-p-slide-2-gallery-label">Upload photos for your property gallery</label>
                             <div className="list-p-slide-2-all-cards-container">
                                 {imgList.map((img, index) => {
-                                    console.log(imgList)
                                     return (
                                         <div
                                             className="list-p-slide-2-single-input-container"

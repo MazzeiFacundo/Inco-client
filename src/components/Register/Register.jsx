@@ -25,7 +25,6 @@ function Register() {
     })
 
     function handleChange(e) {
-        console.log(e.target.name)
         setInput({
             ...input,
             [e.target.name]: e.target.value
@@ -35,12 +34,10 @@ function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(input)
         setErrors(validateRegister({ ...input, [e.target.name]: e.target.value }))
         if (input.password !== input.repeatPassword) return setErrors({ ...errors, repeatPassword: "Passwords do not match" })
         try {
             const response = await axios.post("https://inco-server-production.up.railway.app/register", input);
-            console.log(response)
             if (response.data.msgE) {
                 setInput({
                     fullName: "",

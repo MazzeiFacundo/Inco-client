@@ -2,7 +2,6 @@ export function validateProfileEdit(input) {
     const errors = {};
     let regex = /^(?=.*[A-Za-z ñ Ñ])[A-Za-z ñ Ñ]{8,35}$/
     if (!regex.test(input.fullName)) {
-        console.log(regex.test(input.userName))
         errors.fullName = "Your full name must be between 8 and 35 characters long and must not contain special characters.";
     } else
         if (

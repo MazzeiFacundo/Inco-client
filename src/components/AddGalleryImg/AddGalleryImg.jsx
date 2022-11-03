@@ -20,7 +20,6 @@ function AddGalleryImg() {
         const newList = [...imgList]
         newList[index][name] = URL.createObjectURL(files[0]);
         setImgList(newList)
-        console.log(e.target.files[0])
     }
 
     return (
@@ -30,7 +29,6 @@ function AddGalleryImg() {
                 <label>Image</label>
 
                 {imgList.map((img, index) => {
-                    console.log(imgList)
                     return (
                         <div key={index}>
                             <div>

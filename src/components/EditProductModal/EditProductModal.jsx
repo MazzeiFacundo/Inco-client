@@ -37,7 +37,6 @@ function EditProductModal({
         const userToken = JSON.parse(userCredentials);
         const currentUser = dispatch(getCurrentUser(userToken))
         const currentProduct = dispatch(getCurrentProductDetail(pId))
-        console.log(galleryLenght.flat(1).length)
     }, []);
 
     const [errors, setErrors] = useState({});
@@ -74,13 +73,11 @@ function EditProductModal({
     }
 
     function handleChange(e) {
-        console.log(e.target.name)
         setInput({
             ...input,
             [e.target.name]: e.target.value
         })
         setErrors(validateEditProduct({ ...input, [e.target.name]: e.target.value }));
-        console.log(input)
     }
 
     function handleSelectType(e) {
@@ -141,7 +138,6 @@ function EditProductModal({
 
     const handleAddImg = () => {
         setImgList([...imgList, { image: "" }])
-        console.log(imgList)
         setSubmitGalleryE(true)
         // setTimeout(() => {
         //     if (imgList.filter((e) => { return typeof e.image === "string" }).length >= 1) {
@@ -149,7 +145,6 @@ function EditProductModal({
         //         setSubmitGalleryE(true)
         //     } else if (!submitGalleryE) setSubmitGalleryE(false)
         // }, 100);
-        console.log(imgList.filter((e) => { return typeof e.image === "string" }).length + 1)
     }
 
     const handleRemoveImg = (index) => {
@@ -161,19 +156,15 @@ function EditProductModal({
         const galleryCounter = imgList.filter((e) => { return typeof e.image.name === "string" }).length
         setTimeout(() => {
             if (imgList.filter((e) => { return typeof e.image === "string" }).length < 1) {
-                console.log("turned False")
                 if (submitGalleryE) setSubmitGalleryE(false)
                 setTimeout(() => {
                     if (imgList.filter((e) => { return typeof e.image.name === "string" }).length + galleryCounter <= 9) {
-                        console.log("turned False")
                         if (submitGalleryE) setSubmitGalleryE(false)
                     } else if (!submitGalleryE) setSubmitGalleryE(true)
                 }, 200);
             } else setSubmitGalleryE(true)
         }, 200);
 
-        console.log(galleryLenght.flat(1).length)
-        console.log(imgList.filter((e) => { return typeof e.image.name === "string" }).length)
     }
 
     const handleImgChange = (e, index) => {
@@ -183,19 +174,16 @@ function EditProductModal({
         setImgList(newList)
         setTimeout(() => {
             if (imgList.filter((e) => { return typeof e.image === "string" }).length < 1) {
-                console.log("turned False")
                 if (submitGalleryE) setSubmitGalleryE(false)
                 setTimeout(() => {
                     if (imgList.filter((e) => { return typeof e.image.name === "string" }).length + galleryLenght.flat(1).length <= 9) {
-                        console.log("turned False")
                         if (submitGalleryE) setSubmitGalleryE(false)
                     } else setSubmitGalleryE(true)
                 }, 20);
             } else setSubmitGalleryE(true)
         }, 10);
 
-        console.log(imgList.filter((e) => { return typeof e.image.name === "string" }).length)
-        console.log(galleryLenght.flat(1).length)
+       
     }
 
     const handleCloseModal = () => {
@@ -214,10 +202,8 @@ function EditProductModal({
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            console.log(responseProductImg)
 
         } catch (error) {
-            console.log(error)
         }
         window.location.reload()
     }
@@ -237,11 +223,9 @@ function EditProductModal({
             }))
             dispatch(getProductsGallery(pId))
             setImgList([{ image: "" }])
-            console.log(galleryLenght.flat(1).length)
             window.location.reload()
             return images
         } catch (error) {
-            console.log(error)
         }
     }
 
@@ -302,7 +286,6 @@ function EditProductModal({
                 secondTypeOfDeal: ""
             });
         } catch (e) {
-            console.log(e)
             setInput({
                 name: "",
                 description: "",
