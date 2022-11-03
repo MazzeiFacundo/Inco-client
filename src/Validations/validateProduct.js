@@ -7,10 +7,10 @@ export function validateProduct(input) {
         if (!/^[0-9]{4,9}$/.test(input.price)) {
             errors.price = "Property price must be between 4 and 9 characters long and must only contain numbers.";
         } else
-            if (!/^[A-Za-z0-9 ]{3,35}$/.test(input.location)) {
-                errors.location = "Property location must be between 3 and 35 characters long and must only contain letters or numbers.";
+            if (!/^.{3,35}$/.test(input.location)) {
+                errors.location = "Property location must be between 3 and 35 characters long.";
             } else
-                if (!/^(?=.*[A-Za-z ])[A-Za-z ]{10,255}$/.test(input.description)) {
+                if (!/^.{1,255}$/.test(input.description)) {
                     errors.description = "Property description must be between 10 and 255 characters long.";
                 } else
                     if (!/^.{2,}$/.test(input.typeOfDeal)) {
