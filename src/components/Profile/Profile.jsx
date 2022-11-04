@@ -21,6 +21,9 @@ function Profile() {
     useEffect(() => {
         const userCredentials = window.localStorage.getItem("userCredentials");
         const userToken = JSON.parse(userCredentials);
+        if (!userToken) {
+            navigate("/");
+        }
         const newUser = dispatch(getCurrentUser(userToken))
     }, []);
 
