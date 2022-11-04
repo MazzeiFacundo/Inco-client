@@ -434,6 +434,7 @@
     }
     
     .cardTextDeal{
+        display: none;
         margin-left: -11px;
     }
     
@@ -450,7 +451,7 @@
     }
     
     .cardTextLocation{
-        width: max-content;
+        width: fit-content;
         display: flex;
         font-weight: 600;
         margin-top: 5px;
@@ -532,6 +533,7 @@
     }
     
     .cardTextDeal{
+        display: none;
         margin-left: -11px;
     }
     
@@ -548,7 +550,7 @@
     }
     
     .cardTextLocation{
-        width: max-content;
+        width: fit-content;
         display: flex;
         font-weight: 600;
         margin-top: 5px;
@@ -646,7 +648,7 @@
     }
     
     .cardTextLocation{
-        width: max-content;
+        max-width: fit-content;
         display: flex;
         font-weight: 600;
         margin-top: 5px;

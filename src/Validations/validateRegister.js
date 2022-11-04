@@ -1,10 +1,10 @@
 export function validateRegister(input) {
     const errors = {};
-    let regex = /^(?=.*[A-Za-z ñ Ñ])[A-Za-z ñ Ñ]{8,35}$/
+    let regex = /^(?=.*[A-Za-z ñ Ñ\u00C0-\u00FF])[A-Za-z ñ Ñ\u00C0-\u00FF]{8,35}$/
     if (!regex.test(input.fullName)) {
         errors.fullName = "Your full name must be between 8 and 35 characters long and must not contain special characters.";
     } else
-        if (!/^(?=.*[A-Za-z ñ Ñ])[ A-Za-z ñ Ñ\d@$!%*#?&^_-]{3,20}$/.test(input.userName)) {
+        if (!/^(?=.*[A-Za-z ñ Ñ\u00C0-\u00FF])[ A-Za-z ñ Ñ\d@$!%*#?&^_-\u00C0-\u00FF]{3,20}$/.test(input.userName)) {
             errors.userName = "Your user name must be between 3 and 20 characters long and must not contain dots.";
         } else
             if (

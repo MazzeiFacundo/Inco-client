@@ -1,7 +1,7 @@
 export function validateEditProduct(input) {
     const errors = {};
 
-    if (!/^(?=.*[A-Za-z ])[A-Za-z ]{8,35}$/.test(input.name)) {
+    if (!/^(?=.*[A-Za-z\u00C0-\u00FF])[A-Za-z\u00C0-\u00FF]{8,35}$/.test(input.name)) {
         errors.name = "Your product name must be between 8 and 35 characters long and must not contain special characters or numbers.";
     } else
         if (!/^[0-9]{4,9}$/.test(input.price)) {

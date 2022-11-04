@@ -126,7 +126,7 @@ function CardDetail() {
                                     <div className="detail-p-description-text">{e.description}</div>
                                 </div>
                                 <div className="detail-p-user-data-container">
-                                    <img className="detail-p-user-img" src={`http://localhost:3001/users/getPhotoUser?userName=${e.User.userName}`} alt="none" />
+                                    <img className="detail-p-user-img" src={`https://inco-server-production.up.railway.app/users/getPhotoUser?userName=${e.User.userName}`} alt="none" />
                                     <div className="detail-p-user-text-container">
                                         <div className="detail-p-user-name-text">{e.User.fullName}</div>
                                         <div className="detail-p-user-email-text">{e.User.email}</div>
