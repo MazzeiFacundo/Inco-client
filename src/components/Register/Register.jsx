@@ -187,7 +187,7 @@ function Register() {
                             <input
                                 autocomplete="off"
                                 className="singleInput"
-                                type="text"
+                                type="password"
                                 value={input.repeatPassword}
                                 name="repeatPassword"
                                 onChange={(e) => handleChange(e)}
