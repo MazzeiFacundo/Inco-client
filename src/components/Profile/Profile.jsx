@@ -5,6 +5,7 @@ import NavBar from "../NavBar/NavBar";
 import BottomHeader from "../BottomHeader/BottomHeader";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { showUserData, getCurrentUser } from "../../features/products/productsSlice"
 import FiltersProfile from "../FiltersProfile/FiltersProfile";
@@ -14,6 +15,7 @@ function Profile() {
 
     const dispatch = useDispatch();
     const currentUser = useSelector(showUserData)
+    const navigate = useNavigate();
 
     const [openModal, setOpenModal] = useState(false)
     const [photoUser, setPhotoUser] = useState({});

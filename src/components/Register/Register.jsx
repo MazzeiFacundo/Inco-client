@@ -139,7 +139,7 @@ function Register() {
                             <input
                                 autocomplete="off"
                                 className="singleInput"
-                                type="text"
+                                type="password"
                                 value={input.password}
                                 name="password"
                                 onChange={(e) => handleChange(e)}
