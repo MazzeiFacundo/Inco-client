@@ -1,4 +1,191 @@
-@media screen and (min-width: 1281px) {
+@media screen and (max-width: 1920px) {
+    .landingPageContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .formContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 100vh;
+        border-right: 2px #d50000 solid;
+        z-index: 2;
+        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.97);
+        -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.97);
+        -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.97);
+    }
+    
+    .imgLanding {
+        pointer-events: none;
+        height: 100vh;
+        width: 60%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    
+    .welcomeLanding {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 100%;
+        font-size: 15px;
+    }
+    
+    .logoLanding{
+        pointer-events: none;
+        object-fit: cover;
+        width: 180px;
+        height: 90px;
+    }
+    
+    .formLogin {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 550px;
+        height: 700px;
+        background-color: rgb(247, 247, 247);
+        border: 1px #cbd6dc solid;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    
+    .formLogin:hover{
+        box-shadow: 0px 12px 14px -16px rgba(0, 0, 0, 0.47);
+        -webkit-box-shadow: 0px 12px 14px -16px rgba(0, 0, 0, 0.47);
+        -moz-box-shadow: 0px 12px 14px -16px rgba(0, 0, 0, 0.47);
+    }
+    
+    .textFormLogin {
+        display: flex;
+        font-size: 20px;
+        width: 350px;
+    }
+    
+    .inputLogin {
+        display: flex;
+        height: 40px;
+        width: 350px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .inputLogin:focus {
+        outline: none;
+    }
+    
+    .buttonLoginDisabled{
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 350px;
+        font-size: 18px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 4px;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        background-color: gray;
+        box-shadow: 0px 12px 14px -16px rgba(0, 0, 0, 0.47);
+        -webkit-box-shadow: 0px 12px 14px -16px rgba(0, 0, 0, 0.47);
+        -moz-box-shadow: 0px 12px 14px -16px rgba(0, 0, 0, 0.47);
+        transition: 0.3s;
+    }
+    
+    .buttonLogin {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        width: 350px;
+        font-size: 18px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 4px;
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        background-color: #d50000;
+        box-shadow: 0px 12px 14px -16px rgba(0, 0, 0, 0.47);
+        -webkit-box-shadow: 0px 12px 14px -16px rgba(0, 0, 0, 0.47);
+        -moz-box-shadow: 0px 12px 14px -16px rgba(0, 0, 0, 0.47);
+        transition: 0.3s;
+    }
+    
+    .buttonLogin:hover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        background-color: #860000;
+    }
+    
+    .buttonLogin:active{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        background-color: #750000;
+    }
+    
+    .orDiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-color: #d50000;
+        width: 78%;
+        height: 1px;
+    }
+    
+    .textOr{
+        display: flex;
+        justify-content: center;
+        width: 80px;
+        background-color: rgb(247, 247, 247);
+    }
+    
+    .registerLogin {
+        display: flex;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+    
+    .registerLogin:hover {
+        display: flex;
+        text-decoration: none;
+        color: #d50000;
+    }
+    
+    /* ERRORES */
+    
+    .showErrorEmail {
+        display: flex;
+        color: red;
+        margin: 0;
+        padding: 0px;
+        font-size: 15px;
+        margin-top: -15px;
+    }
+    
+}
+
+@media screen and (max-width: 1366px) {
     .landingPageContainer {
         display: flex;
         align-items: center;
@@ -163,6 +350,7 @@
         display: flex;
         text-decoration: none;
         color: black;
+        font-size: 18px;
     }
     
     .registerLogin:hover {
